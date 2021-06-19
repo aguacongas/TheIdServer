@@ -4,6 +4,7 @@ using Aguacongas.IdentityServer.Admin.Services;
 using Aguacongas.IdentityServer.EntityFramework.Store;
 using Aguacongas.IdentityServer.Store;
 using Aguacongas.TheIdServer.Admin.Hubs;
+using Aguacongas.TheIdServer.Authentication;
 using Aguacongas.TheIdServer.Data;
 using Aguacongas.TheIdServer.Models;
 using Microsoft.AspNetCore.Builder;
@@ -41,7 +42,7 @@ namespace Aguacongas.TheIdServer.Api
 
             services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(connectionString))
-                .AddIdentityServer4AdminEntityFrameworkStores<ApplicationUser, ApplicationDbContext>()
+                .AddIdentityServer4AdminEntityFrameworkStores()
                 .AddConfigurationEntityFrameworkStores(options =>
                     options.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationsAssembly)))
                 .AddOperationalEntityFrameworkStores(options =>
@@ -93,7 +94,7 @@ namespace Aguacongas.TheIdServer.Api
                     options.LegacyAudienceValidation = true;
                 })
                 .AddDynamic<SchemeDefinition>()
-                .AddEntityFrameworkStore<ConfigurationDbContext>()
+                .AddTheIdServerEntityFrameworkStore()
                 .AddGoogle()
                 .AddFacebook()
                 .AddOpenIdConnect()

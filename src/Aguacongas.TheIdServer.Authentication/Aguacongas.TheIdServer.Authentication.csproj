@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <Authors>Olivier Lefebvre</Authors>
-        <Copyright>Copyright (c) 2020 @Olivier Lefebvre</Copyright>
+        <Copyright>Copyright (c) 2021 @Olivier Lefebvre</Copyright>
         <PackageLicense>https://raw.githubusercontent.com/Aguafrommars/TheIdServer/master/LICENSE</PackageLicense>
         <PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/Aguacongas.TheIdServer.Authentication</PackageProjectUrl>
         <RepositoryUrl>https://github.com/Aguafrommars/TheIdServer</RepositoryUrl>

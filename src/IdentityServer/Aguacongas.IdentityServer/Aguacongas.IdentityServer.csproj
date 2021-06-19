@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net5.0</TargetFramework>
+		<TargetFramework>net6.0</TargetFramework>
 		<Authors>Olivier Lefebvre</Authors>
-		<Copyright>Copyright (c) 2020 @Olivier Lefebvre</Copyright>
+		<Copyright>Copyright (c) 2021 @Olivier Lefebvre</Copyright>
 		<PackageLicense>https://raw.githubusercontent.com/Aguafrommars/TheIdServer/master/LICENSE</PackageLicense>
 		<PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/IdentityServer/Aguacongas.IdentityServer</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/Aguafrommars/TheIdServer</RepositoryUrl>
@@ -33,10 +33,10 @@
 		<PackageReference Include="Microsoft.AspNetCore.Authentication" Version="2.2.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="5.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" Version="5.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Identity.Core" Version="5.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="5.0.7" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.Protocols.MessagePack" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Core" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.0-preview.4.21253.5" />
 		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.11.1" />
 	</ItemGroup>
 

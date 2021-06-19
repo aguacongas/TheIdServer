@@ -5,6 +5,7 @@ using Aguacongas.IdentityServer.Abstractions;
 using Aguacongas.IdentityServer.Admin.Options;
 using Aguacongas.IdentityServer.Admin.Services;
 using Aguacongas.IdentityServer.EntityFramework.Store;
+using Aguacongas.TheIdServer.Authentication;
 using Aguacongas.TheIdServer.Data;
 using Aguacongas.TheIdServer.Models;
 using IdentityModel.AspNetCore.OAuth2Introspection;
@@ -47,7 +48,7 @@ namespace Aguacongas.TheIdServer
             
             services.AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(connectionString))
-                .AddIdentityServer4AdminEntityFrameworkStores<ApplicationUser, ApplicationDbContext>()
+                .AddIdentityServer4AdminEntityFrameworkStores()
                 .AddConfigurationEntityFrameworkStores(options =>
                     options.UseSqlServer(connectionString, sql => sql.MigrationsAssembly(migrationsAssembly)))
                 .AddOperationalEntityFrameworkStores(options =>
@@ -97,7 +98,7 @@ namespace Aguacongas.TheIdServer
                     settings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
                 })
                 .AddIdentityServerAdmin<ApplicationUser, SchemeDefinition>()
-                .AddEntityFrameworkStore<ConfigurationDbContext>();
+                .AddTheIdServerStore();
 
             services.AddDatabaseDeveloperPageExceptionFilter()
                 .AddRazorPages(options => options.Conventions.AuthorizeAreaFolder("Identity", "/Account"));

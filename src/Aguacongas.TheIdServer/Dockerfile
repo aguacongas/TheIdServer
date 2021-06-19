@@ -1,11 +1,13 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS sdk
+RUN dotnet workload install microsoft-net-sdk-blazorwebassembly-aot
 
-FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
+FROM sdk AS build
 WORKDIR /src
 COPY ["src/Aguacongas.TheIdServer/Aguacongas.TheIdServer.csproj", "src/Aguacongas.TheIdServer/"]
 COPY ["src/Aguacongas.TheIdServer.Identity/Aguacongas.TheIdServer.Identity.csproj", "src/Aguacongas.TheIdServer.Identity/"]
@@ -14,6 +16,9 @@ COPY ["src/IdentityServer/Aguacongas.IdentityServer.Admin.Http.Store/Aguacongas.
 COPY ["src/IdentityServer/Aguacongas.IdentityServer.Store/Aguacongas.IdentityServer.Store.csproj", "src/IdentityServer/Aguacongas.IdentityServer.Store/"]
 COPY ["src/IdentityServer/Aguacongas.IdentityServer/Aguacongas.IdentityServer.csproj", "src/IdentityServer/Aguacongas.IdentityServer/"]
 COPY ["src/IdentityServer/Aguacongas.IdentityServer.EntityFramework.Store/Aguacongas.IdentityServer.EntityFramework.Store.csproj", "src/IdentityServer/Aguacongas.IdentityServer.EntityFramework.Store/"]
+COPY ["src/IdentityServer/Aguacongas.IdentityServer.RavenDb.Store/Aguacongas.IdentityServer.RavenDb.Store.csproj", "src/IdentityServer/Aguacongas.IdentityServer.RavenDb.Store/"]
+COPY ["src/IdentityServer/Aguacongas.IdentityServer.MongoDb.Store/Aguacongas.IdentityServer.MongoDb.Store.csproj", "src/IdentityServer/Aguacongas.IdentityServer.MongoDb.Store/"]
+COPY ["src/IdentityServer/Aguacongas.IdentityServer.WsFederation/Aguacongas.IdentityServer.WsFederation.csproj", "src/IdentityServer/Aguacongas.IdentityServer.WsFederation/"]
 COPY ["src/Aguacongas.TheIdServer.BlazorApp/Aguacongas.TheIdServer.BlazorApp.csproj", "src/Aguacongas.TheIdServer.BlazorApp/"]
 COPY ["src/IdentityServer/Aguacongas.IdentityServer.Admin/Aguacongas.IdentityServer.Admin.csproj", "src/IdentityServer/Aguacongas.IdentityServer.Admin/"]
 COPY ["src/Aguacongas.TheIdServer.Authentication/Aguacongas.TheIdServer.Authentication.csproj", "src/Aguacongas.TheIdServer.Authentication/"]
@@ -44,7 +49,9 @@ COPY ["src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.Role/Aguacongas.TheI
 COPY ["src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.Roles/Aguacongas.TheIdServer.BlazorApp.Pages.Roles.csproj", "src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.Roles/"]
 COPY ["src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.User/Aguacongas.TheIdServer.BlazorApp.Pages.User.csproj", "src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.User/"]
 COPY ["src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.Users/Aguacongas.TheIdServer.BlazorApp.Pages.Users.csproj", "src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.Users/"]
-RUN dotnet restore "src/Aguacongas.TheIdServer/Aguacongas.TheIdServer.csproj"
+COPY ["src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.RelyingParties/Aguacongas.TheIdServer.BlazorApp.Pages.RelyingParties.csproj", "src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.RelyingParties/"]
+COPY ["src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.RelyingParty/Aguacongas.TheIdServer.BlazorApp.Pages.RelyingParty.csproj", "src/BlazorApp/Aguacongas.TheIdServer.BlazorApp.Pages.RelyingParty/"]
+RUN dotnet restore "src/Aguacongas.TheIdServer/Aguacongas.TheIdServer.csproj" -v n
 COPY . .
 WORKDIR "/src/src/Aguacongas.TheIdServer"
 RUN dotnet build "Aguacongas.TheIdServer.csproj" -c Release -o /app/build

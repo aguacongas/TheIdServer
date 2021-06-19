@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <RootNamespace>Aguacongas.TheIdServer.SqlServer</RootNamespace>
         <Authors>Olivier Lefebvre</Authors>
-        <Copyright>Copyright (c) 2020 @Olivier Lefebvre</Copyright>
+        <Copyright>Copyright (c) 2021 @Olivier Lefebvre</Copyright>
         <PackageLicense>https://raw.githubusercontent.com/Aguafrommars/TheIdServer/master/LICENSE</PackageLicense>
         <PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/Aguacongas.TheIdServer</PackageProjectUrl>
         <RepositoryUrl>https://github.com/Aguafrommars/TheIdServer</RepositoryUrl>
@@ -20,7 +20,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.7" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.0-preview.4.21253.1" />
     </ItemGroup>
 
     <ItemGroup>

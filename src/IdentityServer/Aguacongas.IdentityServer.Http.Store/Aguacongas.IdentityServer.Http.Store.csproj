@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net5.0</TargetFramework>
+		<TargetFramework>net6.0</TargetFramework>
 		<Authors>Olivier Lefebvre</Authors>
 		<Description>IdentityServer4 HTTP stores implementation for TheIdServer API.</Description>
-		<Copyright>Copyright (c) 2020 @Olivier Lefebvre</Copyright>
+		<Copyright>Copyright (c) 2021 @Olivier Lefebvre</Copyright>
 		<PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/IdentityServer/Aguacongas.IdentityServer.EntityFramework.Store</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/aguacongas/TheIdServer</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
@@ -28,7 +28,7 @@
 	<ItemGroup>
 		<PackageReference Include="IdentityModel" Version="5.1.0" />
 		<PackageReference Include="IdentityServer4.Storage" Version="4.1.2" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0-preview.4.21253.7" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -36,7 +36,7 @@
 		<ProjectReference Include="..\Aguacongas.IdentityServer\Aguacongas.IdentityServer.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-    <None Include="package-icon.png" Pack="true" PackagePath=""/>
+    <None Include="package-icon.png" Pack="true" PackagePath="" />
 	</ItemGroup>
 
 </Project>

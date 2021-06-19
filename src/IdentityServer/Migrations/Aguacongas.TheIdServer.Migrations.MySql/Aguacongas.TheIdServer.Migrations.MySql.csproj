@@ -1,43 +1,43 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
-        <RootNamespace>Aguacongas.TheIdServer.MySql</RootNamespace>
-        <Authors>Olivier Lefebvre</Authors>
-        <Copyright>Copyright (c) 2020 @Olivier Lefebvre</Copyright>
-        <PackageLicense>https://raw.githubusercontent.com/Aguafrommars/TheIdServer/master/LICENSE</PackageLicense>
-        <PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/Aguacongas.TheIdServer</PackageProjectUrl>
-        <RepositoryUrl>https://github.com/Aguafrommars/TheIdServer</RepositoryUrl>
-        <RepositoryType>git</RepositoryType>
-        <PackageTags>theidserver;mysql</PackageTags>
-        <Description>Contains db contexts migrations code for MySql.</Description>
-        <PackageIcon>package-icon.png</PackageIcon>
-        <CodeAnalysisRuleSet>..\..\..\..\.sonarlint\aguacongas_theidservercsharp.ruleset</CodeAnalysisRuleSet>
-    </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<RootNamespace>Aguacongas.TheIdServer.MySql</RootNamespace>
+		<Authors>Olivier Lefebvre</Authors>
+		<Copyright>Copyright (c) 2021 @Olivier Lefebvre</Copyright>
+		<PackageLicense>https://raw.githubusercontent.com/Aguafrommars/TheIdServer/master/LICENSE</PackageLicense>
+		<PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/Aguacongas.TheIdServer</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Aguafrommars/TheIdServer</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>theidserver;mysql</PackageTags>
+		<Description>Contains db contexts migrations code for MySql.</Description>
+		<PackageIcon>package-icon.png</PackageIcon>
+		<CodeAnalysisRuleSet>..\..\..\..\.sonarlint\aguacongas_theidservercsharp.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
 
-    <ItemGroup>
-      <None Remove="THIRD-PARTY-NOTICES" />
-    </ItemGroup>
+	<ItemGroup>
+		<None Remove="THIRD-PARTY-NOTICES" />
+	</ItemGroup>
 
-    <ItemGroup>
-      <AdditionalFiles Include="..\..\..\..\.sonarlint\aguacongas_theidserver\CSharp\SonarLint.xml" Link="SonarLint.xml" />
-      <Content Include="THIRD-PARTY-NOTICES">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-	<CopyToPublishDirectory>Never</CopyToPublishDirectory>
-      </Content>
-    </ItemGroup>
+	<ItemGroup>
+		<AdditionalFiles Include="..\..\..\..\.sonarlint\aguacongas_theidserver\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+		<Content Include="THIRD-PARTY-NOTICES">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+			<CopyToPublishDirectory>Never</CopyToPublishDirectory>
+		</Content>
+	</ItemGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.7" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.0-preview.4.21253.1" />
 	</ItemGroup>
-	
+
 	<ItemGroup>
 		<ProjectReference Include="..\..\Aguacongas.IdentityServer.EntityFramework.Store\Aguacongas.IdentityServer.EntityFramework.Store.csproj" />
 	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="package-icon.png" Pack="true" PackagePath="" />
-  </ItemGroup>
+	<ItemGroup>
+		<None Include="package-icon.png" Pack="true" PackagePath="" />
+	</ItemGroup>
 
 </Project>

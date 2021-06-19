@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
 	<PropertyGroup>
-		<TargetFramework>net5.0</TargetFramework>
+		<TargetFramework>net6.0</TargetFramework>
 		<RazorLangVersion>3.0</RazorLangVersion>
 		<RunAnalyzersDuringBuild>true</RunAnalyzersDuringBuild>
 	</PropertyGroup>
@@ -11,10 +11,10 @@
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
-		<PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.TestHost" Version="5.0.7" />
-		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.AspNetCore.TestHost" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.0-preview.4.21253.1" />
 		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
 		<PackageReference Include="Moq" Version="4.16.1" />
 		<PackageReference Include="xunit" Version="2.4.1" />

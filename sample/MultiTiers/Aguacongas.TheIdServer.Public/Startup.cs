@@ -51,10 +51,10 @@ namespace Aguacongas.TheIdServer
 
             services.AddIdentityProviderStore()
                 .AddConfigurationHttpStores(configureOptions)
-                .AddOperationalHttpStores()
+                .AddOperationalStores()
                 .AddIdentity<ApplicationUser, IdentityRole>(
                     options => options.SignIn.RequireConfirmedAccount = Configuration.GetValue<bool>("SignInOptions:RequireConfirmedAccount"))
-                .AddTheIdServerStores(configureOptions)
+                .AddTheIdServerStores()
                 .AddDefaultTokenProviders();
 
             var identityBuilder = services.AddClaimsProviders(Configuration)
@@ -113,7 +113,7 @@ namespace Aguacongas.TheIdServer
                 });
 
             mvcBuilder.AddIdentityServerAdmin<ApplicationUser, SchemeDefinition>()
-                    .AddTheIdServerHttpStore();
+                    .AddTheIdServerStore();
 
             services.AddDatabaseDeveloperPageExceptionFilter()
                 .AddRazorPages(options => options.Conventions.AuthorizeAreaFolder("Identity", "/Account"));

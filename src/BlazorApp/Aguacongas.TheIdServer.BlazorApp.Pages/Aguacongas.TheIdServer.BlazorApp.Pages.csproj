@@ -1,35 +1,35 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-	<PropertyGroup>
-		<TargetFramework>net5.0</TargetFramework>
-		<Authors>Olivier Lefebvre</Authors>
-		<Copyright>Copyright (c) 2020 @Olivier Lefebvre</Copyright>
-		<PackageLicense>https://raw.githubusercontent.com/Aguafrommars/TheIdServer/master/LICENSE</PackageLicense>
-		<PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/Aguacongas.TheIdServer.BlazorApp</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/Aguafrommars/TheIdServer</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-		<PackageTags>theidserver;identityserver4;oidc;oauth;identity,authentication;security</PackageTags>
-		<Description>TheIdServer administration application pages.</Description>
-		<DebugType>Full</DebugType>
-		<PackageIcon>package-icon.png</PackageIcon>
-		<CodeAnalysisRuleSet>..\..\..\.sonarlint\aguacongas_theidservercsharp.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Authors>Olivier Lefebvre</Authors>
+        <Copyright>Copyright (c) 2021 @Olivier Lefebvre</Copyright>
+        <PackageLicense>https://raw.githubusercontent.com/Aguafrommars/TheIdServer/master/LICENSE</PackageLicense>
+        <PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/Aguacongas.TheIdServer.BlazorApp</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Aguafrommars/TheIdServer</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>theidserver;identityserver4;oidc;oauth;identity,authentication;security</PackageTags>
+        <Description>TheIdServer administration application pages.</Description>
+        <DebugType>Full</DebugType>
+        <PackageIcon>package-icon.png</PackageIcon>
+        <CodeAnalysisRuleSet>..\..\..\.sonarlint\aguacongas_theidservercsharp.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
 
-	<ItemGroup>
-	  <AdditionalFiles Include="..\..\..\.sonarlint\aguacongas_theidserver\CSharp\SonarLint.xml" Link="SonarLint.xml" />
-	</ItemGroup>
+    <ItemGroup>
+      <AdditionalFiles Include="..\..\..\.sonarlint\aguacongas_theidserver\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+    </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Microsoft.AspNetCore.Components" Version="5.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="5.0.7" />
-	</ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.0-preview.4.21253.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="6.0.0-preview.4.21253.5" />
+    </ItemGroup>
 
-	<ItemGroup>
-	  <ProjectReference Include="..\Aguacongas.TheIdServer.BlazorApp.Components\Aguacongas.TheIdServer.BlazorApp.Components.csproj" />
-	</ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Aguacongas.TheIdServer.BlazorApp.Components\Aguacongas.TheIdServer.BlazorApp.Components.csproj" />
+    </ItemGroup>
 
-	<ItemGroup>
+    <ItemGroup>
     <None Include="package-icon.png" Pack="true" PackagePath="" />
-	</ItemGroup>
+    </ItemGroup>
 
 </Project>

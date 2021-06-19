@@ -169,7 +169,8 @@ namespace Aguacongas.TheIdServer
             ConfigureDynamicProviderManager(mvcBuilder, isProxy);
 
             services.AddRemoteAuthentication<RemoteAuthenticationState, RemoteUserAccount, OidcProviderOptions>();
-            services.AddScoped<LazyAssemblyLoader>()
+            services.Configure<HostModelOptions>(Configuration.GetSection(nameof(HostModelOptions)))
+                 .AddScoped<LazyAssemblyLoader>()
                  .AddScoped<AuthenticationStateProvider, RemoteAuthenticationService>()
                  .AddScoped<SignOutSessionStateManager>()
                  .AddScoped<ISharedStringLocalizerAsync, BlazorApp.Infrastructure.Services.StringLocalizer>()

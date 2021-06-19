@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net5.0</TargetFramework>
+        <TargetFramework>net6.0</TargetFramework>
         <Authors>Olivier Lefebvre</Authors>
         <Description>Expose OData controllers to manage IdentityServer4.</Description>
-        <Copyright>Copyright (c) 2020 @Olivier Lefebvre</Copyright>
+        <Copyright>Copyright (c) 2021 @Olivier Lefebvre</Copyright>
         <PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/IdentityServer/Aguacongas.IdentityServer.Admin</PackageProjectUrl>
         <RepositoryUrl>https://github.com/aguacongas/TheIdServer</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
@@ -30,18 +30,18 @@
 	<ItemGroup>
 		<PackageReference Include="Community.OData.Linq.Json" Version="1.4.3" />		
 		<PackageReference Include="IdentityServer4.AspNetIdentity" Version="4.1.2" />
-		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="5.0.7" />
-		<PackageReference Include="NSwag.AspNetCore" Version="13.11.3" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="5.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="5.0.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="NSwag.AspNetCore" Version="13.11.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.MicrosoftAccount" Version="6.0.0-preview.4.21253.5" />
 		<PackageReference Include="Microsoft.AspNetCore.Authentication.OAuth" Version="2.2.0" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="5.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.Authentication.WsFederation" Version="5.0.7" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.Twitter" Version="6.0.0-preview.4.21253.5" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.WsFederation" Version="6.0.0-preview.4.21253.5" />
 		<PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.1.0" />
-		<PackageReference Include="Microsoft.AspNetCore.SignalR.StackExchangeRedis" Version="5.0.7" />
+		<PackageReference Include="Microsoft.AspNetCore.SignalR.StackExchangeRedis" Version="6.0.0-preview.4.21253.5" />
 		<PackageReference Include="SendGrid" Version="9.23.2" />
 	</ItemGroup>
     <ItemGroup>

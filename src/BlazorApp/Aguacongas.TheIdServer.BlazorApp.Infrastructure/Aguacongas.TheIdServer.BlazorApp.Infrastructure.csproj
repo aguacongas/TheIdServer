@@ -1,39 +1,39 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
-	<PropertyGroup>
-		<TargetFramework>net5.0</TargetFramework>
-		<Authors>Olivier Lefebvre</Authors>
-		<Copyright>Copyright (c) 2020 @Olivier Lefebvre</Copyright>
-		<PackageLicense>https://raw.githubusercontent.com/Aguafrommars/TheIdServer/master/LICENSE</PackageLicense>
-		<PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/Aguacongas.TheIdServer.BlazorApp</PackageProjectUrl>
-		<RepositoryUrl>https://github.com/Aguafrommars/TheIdServer</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-		<PackageTags>theidserver;identityserver4;oidc;oauth;identity,authentication;security</PackageTags>
-		<Description>TheIdServer administration application models, services, validators and extensions.</Description>
-		<DebugType>Full</DebugType>
-		<RootNamespace>Aguacongas.TheIdServer.BlazorApp</RootNamespace>
-		<PackageIcon>package-icon.png</PackageIcon>
-		<CodeAnalysisRuleSet>..\..\..\.sonarlint\aguacongas_theidservercsharp.ruleset</CodeAnalysisRuleSet>
-	</PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Authors>Olivier Lefebvre</Authors>
+        <Copyright>Copyright (c) 2021 @Olivier Lefebvre</Copyright>
+        <PackageLicense>https://raw.githubusercontent.com/Aguafrommars/TheIdServer/master/LICENSE</PackageLicense>
+        <PackageProjectUrl>https://github.com/Aguafrommars/TheIdServer/tree/master/src/Aguacongas.TheIdServer.BlazorApp</PackageProjectUrl>
+        <RepositoryUrl>https://github.com/Aguafrommars/TheIdServer</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>theidserver;identityserver4;oidc;oauth;identity,authentication;security</PackageTags>
+        <Description>TheIdServer administration application models, services, validators and extensions.</Description>
+        <DebugType>Full</DebugType>
+        <RootNamespace>Aguacongas.TheIdServer.BlazorApp</RootNamespace>
+        <PackageIcon>package-icon.png</PackageIcon>
+        <CodeAnalysisRuleSet>..\..\..\.sonarlint\aguacongas_theidservercsharp.ruleset</CodeAnalysisRuleSet>
+    </PropertyGroup>
 
-	<ItemGroup>
-	  <AdditionalFiles Include="..\..\..\.sonarlint\aguacongas_theidserver\CSharp\SonarLint.xml" Link="SonarLint.xml" />
-	</ItemGroup>
+    <ItemGroup>
+      <AdditionalFiles Include="..\..\..\.sonarlint\aguacongas_theidserver\CSharp\SonarLint.xml" Link="SonarLint.xml" />
+    </ItemGroup>
 
-	<ItemGroup>
-		<PackageReference Include="Aguacongas.AspNetCore.Authentication" Version="4.0.3" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.7" />
-		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="5.0.7" />
-		<PackageReference Include="Microsoft.Extensions.Http" Version="5.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="5.0.7" />
-		<PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.11.1" />
-		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-	</ItemGroup>
-	<ItemGroup>
-		<ProjectReference Include="..\..\IdentityServer\Aguacongas.IdentityServer.Admin.Http.Store\Aguacongas.IdentityServer.Admin.Http.Store.csproj" />
-	</ItemGroup>
-	<ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Aguacongas.AspNetCore.Authentication" Version="4.0.3" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0-preview.4.21253.5" />
+        <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.0-preview.4.21253.5" />
+        <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0-preview.4.21253.7" />
+        <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="6.0.0-preview.4.21253.5" />
+        <PackageReference Include="Microsoft.IdentityModel.Protocols.OpenIdConnect" Version="6.11.1" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\IdentityServer\Aguacongas.IdentityServer.Admin.Http.Store\Aguacongas.IdentityServer.Admin.Http.Store.csproj" />
+    </ItemGroup>
+    <ItemGroup>
     <None Include="package-icon.png" Pack="true" PackagePath="" />
-	</ItemGroup>
+    </ItemGroup>
 
 </Project>
